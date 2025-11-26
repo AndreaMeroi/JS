@@ -36,7 +36,7 @@ let price = ''
 // calculate 20% discount IF user age < 18 
 
 if (userAge <= 20) {
-    10
+
     price = kmCost * 0.80
 }
 // calculate 40% discount ELSE IF user age > 65
