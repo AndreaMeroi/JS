@@ -13,15 +13,15 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 */
 
-//ask for user age
+//ask for user age (uso parseInt per avere la certezza che il contenuto del prompt sia un tipo di dato:numero)
 
-const userAge = prompt('type your age')
+const userAge = parseInt(prompt('type your age'))
 console.log(userAge);
 
 
 //ask for how many km to travel
 
-const userKm = prompt('Type how many km you want to fravel for')
+const userKm = parseInt(prompt('Type how many km you want to fravel for'))
 console.log(userKm);
 
 // price = 0.21 * n km
