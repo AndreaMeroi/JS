@@ -112,3 +112,54 @@ for (let i = 0; i < numbers.length; i++) {
 
     }
 }
+
+// Snacks 
+
+const cities = ['London', 'Shanghai', 'new york', 'delhi', 'kuala lumpur']
+const names = []
+const numeri = [1, 2, 3]
+const colours = ['red', 'blue', 'yellow']
+const keys = ['q', 'w', 'e', 'r', 't', 'y']
+const countries = ['bolivia', 'jordan', 'greenland']
+const fruits = ['apple', 'orange', 'pear']
+
+//aggiungi Fred all'array names
+names.push('Fred')
+console.log(names);
+
+//aggiungi 4 alla fine dell'array numbers
+numeri.push(4)
+console.log(numeri);
+
+//aggiungi rio all'inizio dell'array cities
+cities.unshift('rio')
+console.log(cities);
+
+//stampa in console tutte le città 
+
+for (let i = 0; i < cities.length; i++) {
+
+    const thisCity = cities[i]
+    console.log(thisCity);
+
+}
+
+//trovare la posizione di jordan nell'array 
+
+console.log(countries.indexOf('jordan'));
+const jordanIndex = countries.indexOf('jordan')
+
+//rimuover l'elemento jordan dall'arrray
+
+countries.splice(jordanIndex, 1)
+console.log(countries);
+
+//ciclare al contrario nell'array colours 
+
+for (let i = colours.length; i >= 0; i--) {
+
+    console.log(colours[i]);
+
+}
+
+
