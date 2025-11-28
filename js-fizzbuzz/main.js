@@ -12,7 +12,8 @@ scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
 proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
 tools:
-- FOR Cicle
+- FOR Loop
+- operatore modulo (%)
 - variabile d'appoggio per non sovrascrivere i che da numero si trasformerebbe in stringa
 -IF/ELSE IF/ELSE IF/ELSE
 - 
