@@ -97,6 +97,18 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for (let i = 0; i < numbers.length; i++) {
 
     const thisNumbers = numbers[i]
-    console.log(thisNumbers);
 
+    // salvando il risultato del ciclo FOR in una variabile d'appoggio posso lavorare meglio il dato 
+    // esempio: cerco di individuaare quando il numero è pari 
+
+    if (thisNumbers % 2 === 0) {
+
+        console.log(`the number ${thisNumbers} is even`);
+
+    }
+    else {
+
+        console.log(`the number ${thisNumbers} is odd`)
+
+    }
 }
