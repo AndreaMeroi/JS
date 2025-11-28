@@ -149,14 +149,19 @@ for (let i = 0; i < cities.length; i++) {
 console.log(countries.indexOf('jordan'));
 const jordanIndex = countries.indexOf('jordan')
 
-//rimuover l'elemento jordan dall'arrray
+//rimuoverE l'elemento jordan dall'arrray
 
 countries.splice(jordanIndex, 1)
 console.log(countries);
 
 //ciclare al contrario nell'array colours 
 
-for (let i = colours.length; i >= 0; i--) {
+/* in questo caso: 
+devo utilizzare -1 perchè, mentre gli indici partono da 0 
+LENGTH invece parte da 1 perciò per far si che il ciclo 
+parta dall'elemento 3 anzichè dal 4 devo aggiungere i l - 1 al contatore
+*/
+for (let i = colours.length - 1; i >= 0; i--) {
 
     console.log(colours[i]);
 
