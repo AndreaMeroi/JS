@@ -47,10 +47,25 @@ console.log(movies);
 
 for (let i = 0; i < movies.length; i++) {
 
-    const thisMovie = movies[i]
-    console.log(thisMovie);
+    // con la parentesi quadra indico l'elemento dell'array da loggare [i]
+    console.log(movies[i]);
 
 }
+
+
+// in alternativa posso anche utilizzare una variabile d'appoggio 
+console.log('CON VARIABILE D APPOGGIO')
+
+
+for (let i = 0; i < movies.length; i++) {
+
+    //variabile d'appoggio
+    const thisMovies = movies[i]
+    console.log(thisMovies);
+
+
+}
+
 
 /* movies.length = 3
 
@@ -61,6 +76,10 @@ i = 0 ; 3 < 3 -> false
 
 */
 
+
+// ESEMPI
+//nomi
+
 const nomi = ['marco', 'luca', 'paolo']
 
 for (let i = 0; i < nomi.length; i++) {
@@ -69,3 +88,15 @@ for (let i = 0; i < nomi.length; i++) {
 
 }
 
+//numbers 
+
+
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for (let i = 0; i < numbers.length; i++) {
+
+    const thisNumbers = numbers[i]
+    console.log(thisNumbers);
+
+}
