@@ -20,3 +20,48 @@ Ho bisogno di parametri?
 Devo restituire un valore?
 Se sì, di che tipo?
  */
+//ESERCIZIO 1
+
+// Chiedere all’utente di inserire una parola
+
+const typedWord = 'ANNA'
+
+// stampare la paroa al contrario
+
+function isPalindrom(word) {
+
+    let reversed = ''
+
+
+    for (let i = word.length - 1; i >= 0; i--) {
+
+        // con l'operatore += inserisco le singole lettere una dopo l'altra per creare una singola stringa 
+
+        reversed += word[i]
+
+    }
+
+    console.log(reversed)
+
+    // confrontare la versione inserita dall'utente con la versione al contrario per definires e le due parole sono uguali 
+
+    if (reversed === word) {
+
+        return `La parola ${word} è palindroma`
+
+    } else {
+
+        return `La parola ${word} NON è palindroma`
+
+    }
+
+}
+
+// invocare la funzione per stampare il risultato 
+
+const result = isPalindrom(typedWord)
+console.log(result);
+
+
+
+
