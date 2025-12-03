@@ -25,7 +25,7 @@ Creare una funzione per capire se la parola inserita è palindroma */
 
 const typedWord = 'Marco'
 
-// stampare la paroa al contrario
+// creo la funzione per stampare la paroa al contrario
 function reverse_Word(word) {
     let reversed = ''
 
@@ -40,7 +40,7 @@ function reverse_Word(word) {
     console.log(reversed)
     return reversed
 }
-// confrontare la versione inserita dall'utente con la versione al contrario per definires e le due parole sono uguali 
+// creo la funzione per confrontare la versione inserita dall'utente con la versione al contrario per definires e le due parole sono uguali 
 
 function isPalindrom(word) {
 
@@ -56,6 +56,8 @@ function isPalindrom(word) {
     // in questo caso non serve l'ELSE per indicare il FALSE lo fa automaticamente
 
 }
+
+// UTILIZZO 2 FUNZIONI perchè è meglio in ottica di riutilizzo creare funzioni che facciano una singola azione 
 
 // invocare la funzione per stampare il risultato 
 
