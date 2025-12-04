@@ -113,4 +113,66 @@ console.log(imgEl.src);
 imgEl.src = 'https://magazine.arcaplanet.it/wp-content/uploads/2023/02/razza-lagotto-romagnolo.jpg'
 console.log(imgEl.src);
 
+//il software chiede all'utente il suo nome 
+
+const userName = 'Andrea' //dovrei usare promt
+//il software chiede all'utente il suo colore preferito
+const favColor = 'green' //Dovrei usare prompt
+
+// il software stampa in pagina ilnome dell'utente del colore specificato 
+
+
+//seleziono il nodo della dom DOVE inserire il nome utente
+const userOutputE1 = document.querySelector('#userOutput') //uso il cancelletto perchè seleziono l'ID, come in CSS)
+//uso innerHTML per inserire ilnome dell'utente 
+userOutputE1.innerHTML = userName
+// uso ELEMENT.STYLE.COLO per colorare il testo
+userOutputE1.style.color = favColor // in caso di prompt > favColor.toLowerCase()
+
+// qui quello che seccude nel codice
+console.log(userOutputE1);
+
+
+/*IMPORTANTE: EVENT LISTENER */
+
+const buttonEl = document.querySelector('button') //non uso ne '.' ne '#' perchè prendo direttamente il tag)
+// attivo l'eventListener sul click
+
+//con la funzione anonima
+buttonEl.addEventListener('click', function () {
+    console.log('hai cliccato');
+
+})
+
+
+//con l'arrow function
+buttonEl.addEventListener('click', () => {
+
+    console.log('Hai cliccato arrow function');
+
+})
+
+//con il function handler(il nome della funzione)> Utilizzabile SOLO se la funzione non prevede parametri
+
+function handleClick() {
+    console.log('Hai cliccato usando una funzione gia esistente nel codice, perciò riutilizzabile');
+
+}
+buttonEl.addEventListener('click', handleClick)
+
+/*ESERCIZIO */
+
+//Al click di un pulsante cambiare il colore dell'h1 sottostante
+
+//selezionare il Bottone e l'H1
+
+const changeColorE1 = document.getElementById('colorChanger')
+const messageE1 = document.getElementById('message')
+
+//add event listener
+
+changeColorE1.addEventListener('click', function () {
+    //change text color
+    messageE1.style.color = 'green'
+})
 
