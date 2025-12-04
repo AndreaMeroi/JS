@@ -5,7 +5,7 @@ buon pomeriggio se è pomeriggio (fino alle 17)
 e buonasera se è sera (oltre le 17)
 */
 
-const name = 'Mario';
+const userName = 'Mario';
 
 
 // Dichiara la funzione qui.
@@ -16,3 +16,27 @@ const name = 'Mario';
 
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
+
+
+
+
+
+
+
+
+
+
+/*FUNZIONE SALUTO da cui partire*/
+// Dichiara la funzione qui.
+
+const greet = (name) => {
+    return `Ciao ${name}`
+}
+
+
+// Invoca la funzione qui e stampa il risultato in console
+
+const result = greet(userName)
+console.log(result);
+
+
