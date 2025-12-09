@@ -28,12 +28,12 @@ buttonEl.addEventListener('click', function () {
     //utilizzo true e false in un IF per selezionare in quale caso mostrare la lamp acceso o spenta
     if (!isOn) {
         // add innetrHTML changing 
-        kickStarter.innerHTML = 'Spegni'
+        kickStarter.innerText = 'Spegni'
         // add img changing 
         yelloLamp.src = './img /yellow_lamp.png'
         isOn = true
     } else {
-        kickStarter.innerHTML = 'Accendi'
+        kickStarter.innerText = 'Accendi'
         yelloLamp.src = './img /white_lamp.png'
         isOn = false
     }
