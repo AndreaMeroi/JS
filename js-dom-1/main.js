@@ -16,8 +16,7 @@ E così via...
 
 //select Button 
 const buttonEl = document.getElementById('kickStarter')
-//select lamp on 
-
+//select lamp off/on 
 let isOn = false
 
 //add eventListener 
