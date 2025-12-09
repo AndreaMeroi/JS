@@ -9,21 +9,38 @@ BONUS
 
 Facciamo accendi e spegni:
 
-Al primo click la lampadina si accende e nel bottone compare la scritta "Spegni"
+
 Al secondo click la lampadina si spegne e nel bottone compare la scritta "Accendi"
 E così via...
  */
 
-//select button
+//select Button 
 const buttonEl = document.getElementById('kickStarter')
+//select lamp on 
+
+let isOn = false
 
 //add eventListener 
 buttonEl.addEventListener('click', function () {
 
-    const kickStarter = document.getElementById('img')
-    kickStarter.src = ''
+    //Al primo click la lampadina si accende e nel bottone compare la scritta "Spegni"
+    const kickStarter = document.getElementById('kickStarter')
+    const yelloLamp = document.getElementById('pic')
+    //utilizzo true e false in un IF per selezionare in quale caso mostrare la lamp acceso o spenta
+    if (!isOn) {
+        // add innetrHTML changing 
+        kickStarter.innerHTML = 'Spegni'
+        // add img changing 
+        yelloLamp.src = './img /yellow_lamp.png'
+        isOn = true
+    } else {
+        kickStarter.innerHTML = 'Accendi'
+        yelloLamp.src = './img /white_lamp.png'
+        isOn = false
+    }
 })
-// add img changing 
+
+
 
 
 
