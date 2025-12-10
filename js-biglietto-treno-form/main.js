@@ -89,7 +89,7 @@ formEl.addEventListener('submit', (e) => {
 
 })
 
-// helper function 
+// HELPER FUNCTION
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -98,7 +98,9 @@ function getRndInteger(min, max) {
 /* per inserire dinamicamente la card anzichè nel file html 
     la metto tra i backtick cosi da poter interpolare eventuali variabili e funzioni
 */
-// la funzione accetta i 4 parametri del markup
+
+
+// la funzione accetta i 4 parametri del markup 
 function generateTicketMarkup(nameFieldValue, finalPrice, cpCode, wagonNumb) {
 
     // uso return perchè la funzione deve restituire il markup descritto
