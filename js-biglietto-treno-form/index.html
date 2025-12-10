@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-biglietto-treno-form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8">
+                <H3>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
+                <form>
+                    <div class="row g-3 row-cols-2">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Add your full name" value="" required>
+                        <label for="Km">Km</label>
+                        <input type="number" id="Km" placeholder="Add km" value="" required>
+                        <label for="Age">Age</label>
+                        <input type="number" id="Age" placeholder="Add Age" value="" required>
+                        <label for="finalPrice">Final Price</label>
+                        <input type="text" id="finalPrice" placeholder="Total" value="">
+                        <!--<select name="Fascia d'età" id="Age">
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="pensionato">Pensionato</option>
+            </select>-->
+                        <button id="genera">Genera</button>
+
+
+
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
