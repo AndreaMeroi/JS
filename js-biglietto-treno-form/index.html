@@ -12,35 +12,34 @@
 
 <body>
 
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-md-8">
-                <H3>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
-                <form>
-                    <div class="row g-3 row-cols-2">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="Add your full name" value="" required>
-                        <label for="Km">Km</label>
-                        <input type="number" id="Km" placeholder="Add km" value="" required>
-                        <label for="Age">Age</label>
-                        <input type="number" id="Age" placeholder="Add Age" value="" required>
-                        <label for="finalPrice">Final Price</label>
-                        <input type="text" id="finalPrice" placeholder="Total" value="">
-                        <!--<select name="Fascia d'età" id="Age">
+    <div class="container">
+
+        <H1>Ticket Generator</h1>
+        <form class="d-flex flex-wrap align-items-center gap-1">
+
+
+            <input class="form-control" type="text" id="name-field" placeholder="Add your full name" value="" required>
+
+            <input class="form-control" type="number" id="Km-field" placeholder="Add km" value="" required>
+
+            <input class="form-control" type="number" id="Age-field" placeholder="Add Age" value="" required>
+
+            <!--<select name="Fascia d'età" id="Age">
                 <option value="minorenne">Minorenne</option>
                 <option value="maggiorenne">Maggiorenne</option>
                 <option value="pensionato">Pensionato</option>
             </select>-->
-                        <button id="genera">Genera</button>
+            <button class="btn" id="genera">Genera Ticket</button>
+        </form>
+
+        <div id="output"></div>
 
 
 
 
-                    </div>
-                </form>
-            </div>
+    </div>
 
-        </div>
+    </div>
     </div>
 
     <script src="./main.js"></script>

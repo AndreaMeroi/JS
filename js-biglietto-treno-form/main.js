@@ -36,13 +36,6 @@ anch’essa da scrivere in console.
 
 console.log('js-biglietto-treno-form');
 
-
-
-const userKm = document.getElementById('Km')
-
-const userAge = document.getElementById('Age')
-
-
 /* MILESTONE 2:Solo una volta che il milestone 1 sarà completo e funzionante 
 allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e 
 visualizzare il calcolo finale con il prezzo. 
@@ -51,39 +44,98 @@ in pagina (il prezzo dovrà essere formattato con massimo due decimali,
 per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 */
 
-const form = document.querySelector('form')
+//seleziono i nodes della dom 
 
-form.addEventListener('submit', (e) => {
+const nameFieldEl = document.getElementById('name-field')
+const KmFieldEl = document.getElementById('Km-field')
+const AgeFieldEL = document.getElementById('Age-field')
+
+const outputEl = document.getElementById('output')
+const pricePerKm = 0.21
+
+
+
+const formEl = document.querySelector('form')
+
+formEl.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const km = Number(userKm.value)
-    const age = Number(userAge.value)
+    const nameFieldValue = nameFieldEl.value
+    const KmFieldValue = Number(KmFieldEl.value)
+    const AgeFieldValue = Number(AgeFieldEL.value)
 
 
-    const pricePerKm = 0.21
 
-    const cost = pricePerKm * km
 
-    let price
+    let price = pricePerKm * KmFieldValue
 
-    if (age <= 18) {
-        price = cost * 0.80
-    } else if (age >= 65) {
-        price = cost * 0.60
-    } else {
-        price = cost
+    if (AgeFieldValue <= 18) {
+        price = price * 0.80
+    } else if (AgeFieldValue >= 65) {
+        price = price * 0.60
     }
 
     const finalPrice = price.toFixed(2)
-
     console.log(finalPrice);
 
-    // update Final Price Field
+    // utilizzo la funzione getRndInteger per generare il Codice CP e il wagon Numb
+    const cpCode = getRndInteger(90000, 100000)
+    const wagonNumb = getRndInteger(1, 9)
 
-    const total = document.getElementById('finalPrice')
 
-    total.value = finalPrice
+    // faccio generare la card dopo il submit del form utilizzando la funzione che ho creato 
+
+    outputEl.innerHTML = generateTicketMarkup(nameFieldValue, finalPrice, cpCode, wagonNumb)
+
 })
+
+// helper function 
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+/* per inserire dinamicamente la card anzichè nel file html 
+    la metto tra i backtick cosi da poter interpolare eventuali variabili e funzioni
+*/
+// la funzione accetta i 4 parametri del markup
+function generateTicketMarkup(nameFieldValue, finalPrice, cpCode, wagonNumb) {
+
+    // uso return perchè la funzione deve restituire il markup descritto
+
+    return `
+ <div class="card">
+ <div class="card-header">
+ ${nameFieldValue}
+ </div>
+            <div class="card-body">
+                <h3>Your Ticket</h3>
+                <div>
+                    <span>Final Price</span>
+                    <strong id="price">${finalPrice}&euro;</strong>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <span>CP-CODE</span>
+                        <strong class="cp-code">${cpCode}</strong>
+                    </div>
+                    <div>
+                        <span>Wagon Number</span>
+                        <strong class="wagon-number">${wagonNumb}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+`
+
+}
+
+
+
+
+
+
+
 
 
 
