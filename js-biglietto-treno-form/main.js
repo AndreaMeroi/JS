@@ -82,10 +82,17 @@ formEl.addEventListener('submit', (e) => {
     const cpCode = getRndInteger(90000, 100000)
     const wagonNumb = getRndInteger(1, 9)
 
+    // COSTRUISCO L'OGGETTO TICKET per rendere più flessibile la funzione generateTicketMarkup (VEDI VARIANTI DA RIGA 110)
+    const ticket = {
+        name: nameFieldValue,
+        price: finalPrice,
+        cp: cpCode,
+        wagon: wagonNumb
+    }
 
-    // faccio generare la card dopo il submit del form utilizzando la funzione che ho creato 
+    // FINALE IMPORTANTE -->faccio generare la card dopo il submit del form utilizzando la funzione che ho creato 
 
-    outputEl.innerHTML = generateTicketMarkup(nameFieldValue, finalPrice, cpCode, wagonNumb)
+    outputEl.innerHTML = generateTicketMarkup(ticket)
 
 })
 
@@ -100,7 +107,9 @@ function getRndInteger(min, max) {
 */
 
 
-// la funzione accetta i 4 parametri del markup 
+/* la funzione accetta i 4 parametri del markup 
+
+
 function generateTicketMarkup(nameFieldValue, finalPrice, cpCode, wagonNumb) {
 
     // uso return perchè la funzione deve restituire il markup descritto
@@ -131,12 +140,42 @@ function generateTicketMarkup(nameFieldValue, finalPrice, cpCode, wagonNumb) {
 `
 
 }
+*/
+
+/* UTILIZZANDO LA STRUTTURA DATI DI UN OGGETTO POSSO RENDERE LA FUNZIONE PIù FLESSIBILE */
 
 
 
+function generateTicketMarkup(ticket) {
 
+    // uso return perchè la funzione deve restituire il markup descritto
 
+    return `
+ <div class="card">
+ <div class="card-header">
+ ${ticket.name}
+ </div>
+            <div class="card-body">
+                <h3>Your Ticket</h3>
+                <div>
+                    <span>Final Price</span>
+                    <strong id="price">${ticket.price}&euro;</strong>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <span>CP-CODE</span>
+                        <strong class="cp-code">${ticket.cp}</strong>
+                    </div>
+                    <div>
+                        <span>Wagon Number</span>
+                        <strong class="wagon-number">${ticket.wagon}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+`
 
+}
 
 
 
