@@ -197,7 +197,7 @@ const zucchine = [
     },
 ]
 
-let somma = 0
+let pesoTot = 0
 
 for (let i = 0; i < zucchine.length; i++) {
 
@@ -205,8 +205,8 @@ for (let i = 0; i < zucchine.length; i++) {
     somma il risultato di ogni iterazione alla precedente con += 
     */
 
-    somma += zucchine[i].peso
+    pesoTot += zucchine[i].peso
 
 }
 
-console.log(somma);
+console.log(pesoTot);
