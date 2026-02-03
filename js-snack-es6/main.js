@@ -116,8 +116,41 @@ const squadre = [
 // ciclare nell'array
 for (let i = 0; i < squadre.length; i++) {
 
+    // aggiornare proprietà punti_fatti (uso math per generare dei numeri random)
+    squadre[i].punti_fatti = Math.ceil(Math.random() * 50)
+
+    // aggiornare poprietà falli_subiti (uso math per generare dei numeri random)
+    squadre[i].falli_subiti = Math.ceil(Math.random() * 50)
+
+    // console.log(squadre[i]);
 }
-//identificare dove i numeri sono uguali a 0 
-// dove il numer è = 0 inserire un numero generato automaticamente (math.random)
 
+// output
+console.log(squadre);
 
+/*
+Infine, creiamo un nuovo array i cui elementi contengono 
+solo nomi e falli subiti e stampiamo tutto in console.
+ */
+
+const newArrey = []
+
+for (let i = 0; i < squadre.length; i++) {
+
+    // estrarre l'oggetto corrente 
+    const thisSquadra = squadre[i]
+
+    // creare un nuovo oggetto con solo nome e falli_subiti
+    const newObj = {
+
+        nome: thisSquadra.nome,
+        falli_subiti: thisSquadra.falli_subiti
+    }
+
+    // add the new obj to the end of array 
+
+    newArrey.push(newObj)
+
+}
+
+console.log(newArrey);
