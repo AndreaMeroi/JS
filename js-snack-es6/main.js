@@ -13,27 +13,27 @@ Stampare a schermo la bici con peso minore.
 
 const biciclette = [
     {
-        id: 1,
+
         name: 'primavera',
         peso: 7
     },
     {
-        id: 2,
+
         name: 'vento',
         peso: 5
     },
     {
-        id: 3,
+
         name: 'veloce',
         peso: 3
     },
     {
-        id: 4,
+
         name: 'robusta',
         peso: 9
     },
     {
-        id: 5,
+
         name: 'magica',
         peso: 12
     },
