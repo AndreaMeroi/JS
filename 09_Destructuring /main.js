@@ -62,3 +62,4 @@ console.log(otherNames);
 const otherNames = [...names, 'stefano', 'filippo']
 console.log(otherNames);
 */
+
