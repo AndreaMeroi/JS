@@ -4,13 +4,14 @@ console.log('hi');
 
 //select the doms' nodes
 //get the form elemnt
-//get the input elements
+//get the input elements (per far funzionare il bottone e far creare la nuova card da aggiungere)
 const rowEl = document.getElementById('my-team')
 const formEl = document.querySelector('form')
 const nameFieldEl = document.getElementById('name')
 const roleFieldEl = document.getElementById('role')
 const imageFieldEl = document.getElementById('image')
 
+// verifico di aver preso correttamente i nodi della dom 
 console.log(formEl, nameFieldEl, roleFieldEl, imageFieldEl);
 
 
@@ -22,7 +23,6 @@ const team = [
         name: 'wayne Barnet',
         role: 'Founder & Ceo',
         image: `https://picsum.photos/200/300?random=1`
-
     },
     {
         id: 2,
