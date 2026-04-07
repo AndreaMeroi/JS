@@ -199,7 +199,16 @@ fetch(api_url)
 
                 // CHECK IF VEHICLES
                 if (movie.starships.length > 0) {
-                    movie.starships.forEach
+                    movie.starships.forEach(starships_api_endpoint => {
+                        console.log(starships_api_endpoint);
+                        fetch(starships_api_endpoint)
+                            .then(res => res.json())
+                            .then(starship => {
+                                console.log(starship.name);
+
+                            })
+
+                    })
                 }
 
                 // CHECK IF SPECIES
