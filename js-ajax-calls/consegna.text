@@ -1,0 +1,23 @@
+Piccolo esercizio per casa (facoltativo)
+
+Descrizione:
+
+Usando l'endpoint https://swapi.info/people stampa in pagina delle card carine per ciascun personaggio del film restituito dall'API. 
+
+
+Bonus:
+stampa la lista dei film nei quali c'e' il personaggio
+stampa la lista di  astronavi se presenti.
+crea delle funzioni riutilizzabili
+
+
+Qui trovate la repo con una breve scaletta nel readme degli argomenti rivisti oggi a lezione. 
+
+https://github.com/fabiopacifici/8pt_js/tree/main/14_js_ajax_recap
+
+Se ti sei perso il recap cerca di recuperarlo ma in ogni caso non mancare alla lezione di Giovedi! Si inizia a lavorare con terminale muovendo i primi passi fondamentali per la backend. 
+
+Vi aspetto :babyyoda: 
+
+Buon divertimento e confermate lettura come al solito :babyyoda:
+https://swapi.info/people
